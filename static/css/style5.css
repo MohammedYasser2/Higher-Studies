@@ -1,0 +1,31 @@
+body{
+    background: linear-gradient(120deg , rgb(30, 93, 189) , #fff);
+}
+.text{
+                
+    /* pohto stying */
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 100vh;
+   margin-top: 1.5em;
+   padding-top: 25%;
+}
+
+
+
+.link{
+color:rgb(5, 22, 54);
+font-size: 75px;
+font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+margin-left: 35%;
+text-decoration: none;
+
+} 
+
+div a:hover{
+    color: beige;
+    background-color: rgb(103, 184, 255);
+    transform: scale(1.1);
+
+}
+

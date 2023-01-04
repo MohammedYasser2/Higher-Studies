@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+
+{% block title %} HOME {% endblock %} 
+
+
+{% block content%}
+  
+  
+  <form method = "POST" action="{% url 'add-course' %}" >
+    {% csrf_token %}
+
+    <h3>Add New Course</h3>
+    <label for="courseID">Course ID</label>
+    <br>
+    <input type="number" name= "ID"    >
+
+   <br>
+
+    <label for="CousrName" >Course Name </label>
+    <br>
+    <input type="text" name = "name" >
+
+<br>
+
+<label for="Department">Department</label>
+<br>
+<input type="text" name="department">
+<br>
+    
+
+    <label for="NumberOfHours">Number of hours</label>
+<br>
+    <input type="number" name = "n_hours" >
+
+    
+
+    <br>
+    <label for="LectureDay" >Lecture's Day</label>
+    <br>
+    <input type="day"  name = "lectue_day">
+    
+    <br>
+    <label for="HallNumber">Hall Number</label>
+    <br>
+    <input type="number" name = "hall_number"  >
+    <br>
+
+    <input type="submit" value="Submit" id = "submit_btn">
+    
+    <br><br><br>
+   
+    
+    
+</form>
+
+{% endblock %}

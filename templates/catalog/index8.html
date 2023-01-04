@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block title %} HOME {% endblock %} 
+
+
+{% block content%}
+
+
+  <div class = "text" action="{% url 'index8' %}">
+
+               
+               <a href="#" class="link">Human Resources</a>
+                <br>
+        
+               <a href="#" class="link" >Students Affairs</a> 
+                 <br>
+            
+             <a href="{% url 'index' %}" target="_blank" class="link"> 
+                Higher Studies</a>
+                  <br>
+            
+             <a href="" class="link">Laboratory Tracking</a>
+             
+            </div>
+          
+            
+
+
+{% endblock content %}  

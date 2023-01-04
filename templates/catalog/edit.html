@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block title %} HOME {% endblock %} 
+
+
+{% block content%}
+
+<div id="center-div">
+
+    <button onclick="window.location.href = '{% url 'edit-course' %}';" class = "btn"> Edit Course </button> 
+    <button onclick="window.location.href = '{% url 'del-course' %}';" class = "btn"> Delete Course </button> 
+    <button onclick="window.location.href = '{% url 'edit-student' %}';" class = "btn"> Edit Student </button>
+    <button onclick="window.location.href = '{% url 'del-student' %}';" class = "btn"> Delete Student </button>
+
+</div>
+{% endblock content %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+
+{% block title %} {{student.name}} {% endblock %} 
+
+
+{% block content%}
+
+<div class="container">
+    <table class="table">
+        <tbody class="tbody">
+            <tr>
+                <th>id</th>
+                <th>Name</th>
+                <th>birth</th>
+                <th>Gender</th>
+                <th>status</th>
+                <th>department</th>
+            </tr>
+            <tr>
+                <th>{{student.ID}}</th>
+                <th>{{student.name}}</th>
+                <th>{{student.birth}}</th>
+                <th>{{student.gender}}</th>
+                <th>
+                    {% if student.is_active %}
+                        Active
+                    {% else %}
+                        Inactive
+                    {% endif %}
+                </th>
+                <th>{{student.dep}}</th> <br>
+            </tr>
+        </tbody>
+
+
+</div>
+   
+
+ {% endblock content %}

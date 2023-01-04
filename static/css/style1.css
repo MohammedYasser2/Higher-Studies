@@ -1,0 +1,115 @@
+﻿/*Search Page Style*/
+
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&family=Open+Sans:wght@300&family=Roboto:ital,wght@1,300&display=swap');
+
+body {
+    background: linear-gradient(120deg,rgb(30,93,189),#fff);
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.SearchBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0,0.6);
+    max-width: 1000px;
+    width: 100%;
+    padding: 25px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.SearchBox #input {
+        width: 85%;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+.SearchBtn {
+    background: linear-gradient(120deg, rgb(30, 93, 189), #fff);
+    width: 10%;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.SearchBtn .fas {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 18px;
+    }
+
+#SearchForm1 {
+    color: white;
+}
+
+#SearchForm2 {
+    color: white;
+}
+
+header {
+    background-color: var(--background-color);
+    width: 70%;
+
+
+    position: sticky;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-25%);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 90px;
+    margin-left: 400px;
+
+    background: rgba( 70, 80, 128, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.higherStudy {
+    text-decoration: none;
+    color: rgb(24, 24, 122);
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.8em;
+}
+
+nav{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav>a{
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    font-size: 1em;
+    padding-left: 20px;
+    width: fit-content;
+}
+
+nav a:hover {
+    color: rgb(212, 199, 199);
+}
+
+#btn1 {
+    position: absolute;
+    
+    background: linear-gradient(120deg,rgb(30,93,189),#fff);
+    color:black;
+    
+}

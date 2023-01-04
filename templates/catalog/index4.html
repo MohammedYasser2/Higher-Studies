@@ -1,0 +1,40 @@
+﻿{% extends 'base.html' %}
+
+{% block title %} Search {% endblock %}
+
+{% block content %}
+
+
+
+<div class="SearchBox">
+
+    <form method="POST" id="SearchForm1"  action="{% url 'search' %}">
+        {% csrf_token %}
+    
+        <table>
+
+            <tr>
+                <td>
+                    ID:
+                </td>
+                <td>
+                    <input type="number" class="TextBox" placeholder="Type the student's id" name = "ID">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button id="btn1">
+                        Submit Form
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</div>
+
+
+
+
+{% endblock %}

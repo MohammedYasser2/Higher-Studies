@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block title %} HOME {% endblock %} 
+
+
+{% block content%}
+
+
+<form method = "POST" action="{% url 'del-student' %}" >
+    {% csrf_token %}
+
+    <h3>Delete Student</h3>
+    <input type="text" placeholder = "Enter Student ID to Delete"  name = "ID">
+    <input type="submit"  value="Delete" id="submit_btn">
+</form>
+
+
+{% endblock content %}

@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+
+{% block title %} HOME {% endblock %} 
+
+
+{% block content%}
+
+<form id="form" method="POST" action="{% url 'add-student' %}">
+    {% csrf_token %}
+    <h3>Enter Your Information</h3>
+
+    <div class="form-container">
+        <div>
+            <input type="text" placeholder="ID" id="ID" required name="ID"/>
+            <input type="text" placeholder="Name" id="name" required name="name"/>
+        </div>
+
+        <div>
+            <input
+                type="text"
+                placeholder="University"
+                id="university"
+                name="university"
+                required
+            />
+            <input
+                type="text"
+                placeholder="Department"
+                id="department"
+                name="department"
+                required
+            />
+        </div>
+
+        <div class="form-container">
+            <label>Date of Birth: </label>
+            <input type="date" required name="date"/>
+        </div>
+
+        <div id="parent-container">
+            <div class="radio-container">
+                <label> Gender:</label>
+
+                <div>
+                    <input
+                        type="radio"
+                        name="gender"
+                        value="Male"
+                        class="gender"
+                    />
+                    <span>Male</span>
+                </div>
+                <div>
+                    <input
+                        type="radio"
+                        name="gender"
+                        value="Female"
+                        class="gender"
+                    />
+                    <span>Female</span>
+                </div>
+            </div>
+
+            <div class="radio-container">
+                <label>Status:</label>
+
+                <div>
+                    <input type="radio" name="status" class="status" value="active" /><span
+                        >Active</span
+                    >
+                </div>
+                <div>
+                    <input type="radio" name="status" class="status" value="inactive" /><span
+                        >Inactive</span
+                    >
+                </div>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <label>Enter only 3 courses</label>
+            <ol>
+                <li>
+                    <select class="Course" name="course1"/>
+                        {% for course in courses %}
+                            <option value="{{ course.ID }}"> 
+                                {{ course.name }} 
+                            </option>
+                        {% endfor %}
+                    </select>
+                </li>
+                <li>
+                    <select class="Course" name="course2"/>
+                        {% for course in courses %}
+                            <option value="{{ course.ID }}"> 
+                                {{ course.name }} 
+                            </option>
+                        {% endfor %}
+                    </select>
+                </li>
+                <li>
+                    <select class="Course" name="course3"/>
+                        {% for course in courses %}
+                            <option value="{{ course.ID }}"> 
+                                {{ course.name }} 
+                            </option>
+                        {% endfor %}
+                    </select>
+                </li>
+            </ol>
+        </div>
+        <div id="submit-container">
+            <input type="submit" value="Submit" id="submit_btn" />
+        </div>
+    </div>
+</form>
+
+{% endblock %}
